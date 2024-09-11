@@ -9,6 +9,7 @@
     --clr-black: #000;
     --clr-white: #FFF;
     --clr-gray: #636769;
+    --clr-gold: #B38F5F;
 }
 
 html {
@@ -28,6 +29,7 @@ body {
     background: url('./assets/background.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    /* height: 80vh; */
 }
 
 .cta {
@@ -60,6 +62,86 @@ body {
     margin: 2.4rem 0;
 }
 
+#expertise {
+    background: linear-gradient(180deg, #9F2526, #7A1C1C);
+    padding: 12.0rem 0;
+}
+
+.header-expertise {
+    position: relative;
+}
+
+.header-expertise h2 {
+    font-size: 2.8rem;
+    color: var(--clr-white);
+}
+
+.header-expertise p {
+    margin: 2.0rem 0 4.0rem;
+    color: #C0C0C0;
+}
+
+.arrow {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid var(--clr-gold);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s linear;
+}
+
+.arrow i {
+    font-size: 1.8rem;
+    color: var(--clr-gold);
+}
+
+.arrow:hover {
+    background-color: var(--clr-gold);
+}
+
+.arrow:hover i {
+    color: var(--clr-white);
+}
+
+.expertise-card {
+    background-color: rgba(242, 138, 138, 0.5); /* Vermelho suave com opacidade */
+    padding: 3.0rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ff000f;
+}
+
+.expertise-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.expertise-card i {
+    color: var(--clr-gold);
+    font-size: 2.8rem;
+}
+
+.expertise-card a {
+    color: inherit;
+}
+
+.expertise-card h3 {
+    margin: 1.2rem 0;
+    font-size: 2rem;
+    color: var(--clr-white);
+}
+
+.expertise-card p {
+    color: #C0C0C0;
+}
+
 @media (min-width: 992px) {
     .text-lg-initial {
         text-align: initial !important;
@@ -69,5 +151,11 @@ body {
 @media (max-width: 768px) {
     .home-image {
         width: 100%;
+    }
+}
+
+@media (max-width: 545px) {
+    .title {
+        font-size: 3.2rem;
     }
 }
