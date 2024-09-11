@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary: #9F2526;
+    --clr-black: #000;
+    --clr-white: #FFF;
+    --clr-gray: #636769;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Nunito', Arial, sans-serif;
+}
+
+#home {
+    background: url('./assets/background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.cta {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    padding: 0.8rem 1.4rem;
+    border-radius: 6px;
+    transition: all ease-in-out 0.6s linear;
+}
+
+.cta:hover {
+    filter: brightness(0.8);
+    transform: scale(2);
+}
+
+.home-logo {
+    height: 10rem;
+    margin-bottom: 6.2rem;
+}
+
+.title {
+    font-size: 5.2rem;
+    color: var(--clr-primary);
+    font-weight: bold;
+}
+
+.description {
+    color: var(--clr-gray);
+    font-size: 1.8rem;
+    margin: 2.4rem 0;
+}
+
+@media (min-width: 992px) {
+    .text-lg-initial {
+        text-align: initial !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-image {
+        width: 100%;
+    }
+}
