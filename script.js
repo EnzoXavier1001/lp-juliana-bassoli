@@ -5,6 +5,11 @@ $(document).ready(function() {
         dots: true,
         items: 1
     })
+    $('.owl-team').owlCarousel({
+        loop:true,
+        dots: true,
+        items: 3
+    })
     const owl = $('.owl-expertise')
     
     owl.owlCarousel({
@@ -14,13 +19,16 @@ $(document).ready(function() {
         stagePadding: 100,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                stagePadding: 0
             },
             768: {
-                items: 2
+                items: 2,
+                stagePadding: 0
             },
             1024: {
-                items: 3
+                items: 3,
+                stagePadding: 0
             },
             1440: {
                 items: 4
@@ -42,9 +50,8 @@ $(document).ready(function() {
     $(window).on('scroll', function() {
         let scrollTop = $(this).scrollTop();
         const header = $('.header')
-        console.log(scrollTop)
     
-        if (scrollTop > 1200) { // Ajuste este valor conforme necessário
+        if (scrollTop > 600) {
           header.fadeIn();
         } else {
           header.fadeOut();

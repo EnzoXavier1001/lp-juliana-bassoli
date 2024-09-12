@@ -52,7 +52,7 @@ body {
     top: 10px;
     height: 50px;
     background-color: rgba(0, 0, 0, 0.3); /* Preto translúcido */
-    z-index: 1000; /* Mantém o header no topo */
+    z-index: 3; /* Mantém o header no topo */
     color: white; /* Cor do texto */
     padding: 1.8rem;
 }
@@ -65,14 +65,22 @@ body {
 
 .item a {
     color: var(--clr-white);
-    font-weight: bold;
     font-size: 1.6rem;
     width: 0;
 }
 
 .item {
     position: relative;
-    transition: all 4ms ease-in-out;
+}
+
+.item::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 1px;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--clr-primary);
 }
 
 .item:hover::after {
@@ -80,7 +88,6 @@ body {
     display: block;
     position: absolute;
     width: 100%;
-    border: 1px solid var(--clr-primary);
 }
 
 .cta {
@@ -162,7 +169,7 @@ body {
     background-color: rgba(242, 138, 138, 0.5); 
     padding: 3.0rem;
     height: 100%;
-    min-height: 300px; 
+    min-height: 400px; 
     margin: 1.2rem 0;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -244,6 +251,29 @@ body {
 
 .about-me__image {
     width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-me__section-title {
+    font-size: 4.2rem;
+    margin-bottom: 4.2rem;
+    position: relative;
+    color: var(--clr-primary);
+    font-weight: bold;
+}
+
+.about-me__section-title::after {
+    content: '';
+    display: block;
+    border: 1px solid var(--clr-gold);
+    width: 60%;
+    margin: 0 auto;
+}
+
+.about-me__title {
+    font-size: 3.2rem;
 }
 
 #testimonials {
@@ -302,6 +332,31 @@ body {
     width: 30px;
 }
 
+.home-image {
+    width: 100%;
+}
+
+.mt-6 {
+    margin-top: 3.5rem !important;
+}
+
+.footer {
+    padding: 2.0rem 0;
+    background-color:  #f0f0f0;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 2.0rem;
+}
+
+.social-media__item a {
+    color: var(--clr-primary);
+    font-size: 1.8rem;
+}
+
+
 @keyframes pulsing {
     to {
       box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
@@ -314,9 +369,9 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .home-image {
-        width: 100%;
+@media (max-width: 769px) {
+    .about-me__description {
+        text-align: center !important;
     }
 }
 
@@ -324,8 +379,12 @@ body {
     .title {
         font-size: 3.2rem;
     }
-}
 
-.mt-6 {
-    margin-top: 3.5rem !important;
+    .about-me__image {
+        height: 350px;
+    }
+
+    .header {
+        visibility: hidden;
+    }
 }
