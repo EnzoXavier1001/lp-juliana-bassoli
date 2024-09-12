@@ -108,10 +108,12 @@ body {
 }
 
 .expertise-card {
-    background-color: rgba(242, 138, 138, 0.5); /* Vermelho suave com opacidade */
+    background-color: rgba(242, 138, 138, 0.5); 
     padding: 3.0rem;
+    height: 100%;
+    min-height: 300px; 
+    margin: 1.2rem 0;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;

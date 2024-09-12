@@ -5,6 +5,7 @@ $(document).ready(function() {
         loop:true,
         margin:10,
         dots: false,
+        stagePadding: 100,
         responsive: {
             0: {
                 items: 1
@@ -13,9 +14,12 @@ $(document).ready(function() {
                 items: 2
             },
             1024: {
-                items: 4
+                items: 3
             },
             1440: {
+                items: 4
+            },
+            1900: {
                 items: 5
             }
         }
