@@ -38,4 +38,16 @@ $(document).ready(function() {
     $('.arrow-left').click(function() {
         owl.trigger('prev.owl.carousel');
     })
+
+    $(window).on('scroll', function() {
+        let scrollTop = $(this).scrollTop();
+        const header = $('.header')
+        console.log(scrollTop)
+    
+        if (scrollTop > 1200) { // Ajuste este valor conforme necessário
+          header.fadeIn();
+        } else {
+          header.fadeOut();
+        }
+    });
 })

@@ -18,6 +18,10 @@ html {
 
 a {
     text-decoration: none;
+} 
+
+ul {
+    list-style: none;
 }
 
 body {
@@ -30,6 +34,53 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     /* height: 80vh; */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-list {
+    border-radius: 30px;
+    position: fixed;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 10px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3); /* Preto translúcido */
+    z-index: 1000; /* Mantém o header no topo */
+    color: white; /* Cor do texto */
+    padding: 1.8rem;
+}
+
+.list-item {
+    display: flex;
+    height: 100%;
+    gap: 1.8rem;
+}
+
+.item a {
+    color: var(--clr-white);
+    font-weight: bold;
+    font-size: 1.6rem;
+    width: 0;
+}
+
+.item {
+    position: relative;
+    transition: all 4ms ease-in-out;
+}
+
+.item:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    border: 1px solid var(--clr-primary);
 }
 
 .cta {
