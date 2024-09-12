@@ -195,6 +195,62 @@ body {
     width: 100%;
 }
 
+#testimonials {
+    padding: 5.2rem 0;
+    background-color: #F5F5F5;
+}
+
+.card-testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    background-color: var(--clr-white);
+    margin: 1.8rem auto 6.2rem;
+    max-width: 900px;
+    padding: 1.8rem;
+    border-radius: 8px;
+}
+
+.card-testimonials blockquote {
+    font-size: 1.8rem;
+}
+
+.card-testimonials img {
+    width: auto !important;
+    height: 180px;
+}
+
+.testimonials-title {
+    font-size: 4.2rem;
+    position: relative;
+}
+
+.testimonials-description {
+    font-size: 1.7rem;
+    color: var(--clr-gray);
+}
+
+.testimonials-title::after {
+    content: '';
+    display: block;
+    width: 40%;
+    margin: 1.2rem auto;
+    border: 1px solid var(--clr-primary);
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: var(--clr-primary);
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    transition: width .3s ease-in-out;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+    width: 30px;
+}
+
 @keyframes pulsing {
     to {
       box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);

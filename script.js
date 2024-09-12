@@ -1,4 +1,10 @@
 $(document).ready(function() {
+
+    $('.owl-testimonials').owlCarousel({
+        loop:true,
+        dots: true,
+        items: 1
+    })
     const owl = $('.owl-expertise')
     
     owl.owlCarousel({
