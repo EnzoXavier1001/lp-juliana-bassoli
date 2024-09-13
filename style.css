@@ -288,18 +288,31 @@ body {
     gap: 2.4rem;
     background-color: var(--clr-white);
     margin: 1.8rem auto 6.2rem;
-    max-width: 900px;
-    padding: 1.8rem;
+    max-width: 800px;
+    padding: 3.8rem;
     border-radius: 8px;
+    text-align: center;
+    height: 300px;
 }
 
-.card-testimonials blockquote {
+.card-testimonials p {
     font-size: 1.8rem;
+    color: var(--clr-gray);
+    font-weight: 500;
 }
 
-.card-testimonials img {
+.aspas {
     width: auto !important;
-    height: 180px;
+    height: 90px;
+}
+
+.owl-testimonials .owl-dots .owl-dot.active span{
+    background-color: var(--clr-primary);
+    width: 30px;
+}
+
+.owl-testimonials .owl-dots .owl-dot:hover span {
+    background-color: var(--clr-primary);
 }
 
 .home-image {
@@ -357,4 +370,23 @@ body {
     .header {
         visibility: hidden;
     }
+
+    .card-testimonials {
+        height: 350px;
+    }
 }
+
+@media (min-width: 300px) and (max-width: 425px) {
+    .card-testimonials {
+        height: 450px;
+    }
+
+    .aspas {
+        height: 80px;
+    }
+
+    .card-testimonials {
+        font-size: 1.6rem;
+    }
+}
+
