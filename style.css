@@ -120,7 +120,7 @@ body {
     margin: 2.4rem 0;
 }
 
-#expertise {
+#areas-de-atuacao {
     background: linear-gradient(180deg, #9F2526, #7A1C1C);
     padding: 12.0rem 0;
 }
@@ -228,7 +228,7 @@ body {
     color: var(--clr-white);
 }
 
-#about-me {
+#nossa-equipe {
     padding: 5.2rem 0;
 }
 
@@ -276,7 +276,7 @@ body {
     font-size: 3.2rem;
 }
 
-#testimonials {
+#depoimentos {
     padding: 5.2rem 0;
     background-color: #F5F5F5;
 }
