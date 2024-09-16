@@ -339,6 +339,24 @@ body {
     font-size: 1.8rem;
 }
 
+#contact {
+    padding: 3.4rem 0;
+    background: url('assets/bg-contact.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.card-info h3 {
+    font-size: 4.2rem;
+    color: var(--clr-gold);
+}
+
+.card-info span {
+    color: var(--clr-white);
+    font-size: 1.8rem;
+}
+
+
 
 @keyframes pulsing {
     to {
@@ -360,6 +378,10 @@ body {
     .expertise-card {
         min-height: auto;
         height: 400px;
+    }
+
+    .row-align {
+        text-align: center;
     }
 }
 
