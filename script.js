@@ -60,40 +60,48 @@ $(document).ready(function() {
     });
 
     function animateCounter($element, target, duration) {
-        let current = 0;
-        let increment = target / (duration / 50);
+      let current = 0;
+      let increment = target / (duration / 50);
+      const plus = $element.find('.plus');
   
-        const interval = setInterval(function() {
+      // Inicia o símbolo "+" como invisível
+      plus.hide();
+  
+      const interval = setInterval(function() {
           current += increment;
           if (current >= target) {
-            current = target;
-            clearInterval(interval);
+              current = target;
+              plus.show(); // Mostra o símbolo "+" ao alcançar o alvo
+              clearInterval(interval);
           }
-          $element.text(Math.floor(current));
-        }, 50);
-      }
+          $element.contents().filter(function() {
+              return this.nodeType === 3; // apenas nós de texto
+          }).first().replaceWith(Math.floor(current)); // Atualiza apenas o número
+      }, 50);
+  }
   
-      function startCounters() {
-        $('.counter').each(function() {
+  function startCounters() {
+      $('.counter').each(function() {
           const target = parseInt($(this).data('target'));
           animateCounter($(this), target, 2000);
-        });
-      }
+      });
+  }
   
-      function isInView(element) {
-        const windowHeight = $(window).height();
-        const scrollTop = $(window).scrollTop();
-        const elementOffsetTop = $(element).offset().top;
+  function isInView(element) {
+      const windowHeight = $(window).height();
+      const scrollTop = $(window).scrollTop();
+      const elementOffsetTop = $(element).offset().top;
   
-        return elementOffsetTop < (scrollTop + windowHeight) && (elementOffsetTop + $(element).outerHeight()) > scrollTop;
-      }
+      return elementOffsetTop < (scrollTop + windowHeight) && (elementOffsetTop + $(element).outerHeight()) > scrollTop;
+  }
   
-      let countersStarted = false;
+  let countersStarted = false;
   
-      $(window).on('scroll', function() {
-        if (isInView('.section') && !countersStarted) {
+  $(window).on('scroll', function() {
+      if (isInView('.section') && !countersStarted) {
           countersStarted = true;
           startCounters();
-        }
-      });
+      }
+  });
+  
 })
