@@ -14,6 +14,7 @@ $(document).ready(function() {
     const owl = $('.owl-expertise')
     
     owl.owlCarousel({
+        autoplay:true,
         loop:true,
         margin:10,
         dots: false,
@@ -41,11 +42,11 @@ $(document).ready(function() {
     })
 
     $('.arrow-right').click(function() {
-        owl.trigger('next.owl.carousel');
+        owl.trigger('prev.owl.carousel');
     })
 
     $('.arrow-left').click(function() {
-        owl.trigger('prev.owl.carousel');
+        owl.trigger('next.owl.carousel');
     })
 
     $(window).on('scroll', function() {
